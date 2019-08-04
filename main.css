@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/arial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+.calendar {
+  display: grid;
+  grid-gap: 1px;
+  grid-template: repeat 7, 100px/repeat 5, 100px;
+}
+.calendar div {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: border-box;
+  counter-increment: daysIncrem;
+  background-color: #eeeeee;
+}
+
+/*# sourceMappingURL=main.css.map */
