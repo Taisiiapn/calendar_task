@@ -1,14 +1,59 @@
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 body {
-  background: #eee; }
+  font-family: Arial, sans-serif;
+  font-size: 30px; }
+
+.calendar {
+  margin: auto;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(7, 100px);
+  counter-reset: days; }
+  .calendar div {
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid black;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #eee;
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+    .calendar div:hover {
+      background-color: pink;
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px); }
+    .calendar div:after {
+      content: counter(days);
+      counter-increment: days; }
+  .calendar-mon div:first-child {
+    grid-column-start: 1; }
+  .calendar-tue div:first-child {
+    grid-column-start: 2; }
+  .calendar-wed div:first-child {
+    grid-column-start: 3; }
+  .calendar-thu div:first-child {
+    grid-column-start: 4; }
+  .calendar-fri div:first-child {
+    grid-column-start: 5; }
+  .calendar-sat div:first-child {
+    grid-column-start: 6; }
+  .calendar-sun div:first-child {
+    grid-column-start: 7; }
+  .calendar-28 div:nth-child(28) ~ div {
+    display: none; }
+  .calendar-29 div:nth-child(29) ~ div {
+    display: none; }
+  .calendar-30 div:nth-child(30) ~ div {
+    display: none; }
+  .calendar-31 div:nth-child(31) ~ div {
+    display: none; }
 
 /*# sourceMappingURL=main.css.map */
