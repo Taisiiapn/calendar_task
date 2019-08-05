@@ -1,0 +1,16 @@
+@mixin dayOfWeek {
+  @each $day in $listDays {
+    $i: index($listDays, $day);
+    &-#{$day} div:first-child {
+      grid-column-start: #{$i};
+    }
+  }
+}
+
+@mixin amountDays {
+  @for $i from 28 through 31 {
+    &-#{$i} div:nth-child(#{$i}) ~ div {
+      display: none;
+    }
+  }
+}
